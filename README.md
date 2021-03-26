@@ -4,6 +4,7 @@
 #### The objective of this project is to construct reasonable machine learning models, evaluate them and measure their performance. 
 
 <br/>
+
 #### Dataset:
  
 The UK government land registry dataset from 1995 to 2020 was being used to predicts the selling price for the property. [Original dataset (complete Price Paid Data-Single file (CSV)) !](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads)
@@ -28,7 +29,10 @@ As property type (D- detached, S- semi-detached, T-terraced, F-flat/maisonette, 
 #### Explotrory data Analysis
 The data does not have any null values, it had been checked using the isnull() function. The correlation matrix shows a positive correlation with the ‘inLondonOrNot’ attribute meaning the property price goes up if the property is in London. And negative correction with property type T meaning property price goes down with terraced houses.
 
-(https://github.com/Kinjalpatel-00/prodiction-of-property-price-in-london/images/corrlation_matrix.png)
+
+<img src="images/corrlation_matrix.png" width="450"/>
+
+
 
 <br/>
 
@@ -36,7 +40,9 @@ The data does not have any null values, it had been checked using the isnull() f
 
 The encoded data was being fitted in 6 different types of models to achieve sensible performance. The fitted models are linear regression, decision tree regression, random forest regression, lasso regression, Elastic net regression, and Ridge Regression. None of the model able to make accurate predictions but the decision tree and the random forest can make somewhat close predication to labels. 
 
-(https://github.com/Kinjalpatel-00/prodiction-of-property-price-in-london/images/model_RMSE.png)
+<img src="images/model_RMSE.png" width="450"/>
+
+
 
 The table shows that all models have quite high root means square error (prediction error). which means that all models are underfitting and features (property type, estate type, and property in London or not) are not providing enough evidence to make good predictions. The same results were found with 5-fold cross-validation (refer to table), all models are performing equally worse. However, the decision tree and random forest model is performing slightly better than the others, so both models were short-listed for fine turningwith different parameter settings. Fine-tuning models show even worse prediction errors (around 410000£). Seems like I have done a lot of hyperparameter tuning. 
 
@@ -47,8 +53,8 @@ The table shows that all models have quite high root means square error (predict
 
 the random forest regression was taken as the final model to do the prediction for test data, because it has the lower RMSE scores using CV compare to others and it has done better predications than the other models. As expected, the final model did not perform well on testing data. It gave the prediction error of 1645210.0£ for predicting the selling price for a property, which is worse. While comparing with the mean of labels it gives around 470%, which is horrible. The random forest model did not predict well on unseen data at all. 
 
+<img src="images/Error_distribution.png" width="450"/>
 
-(https://github.com/Kinjalpatel-00/prodiction-of-property-price-in-london/images/Error_distribution.png)
 
 The error distribution is somewhat normally distributed and slightly right-skewed.
 
@@ -64,5 +70,5 @@ The error distribution is somewhat normally distributed and slightly right-skewe
 * https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.get_dummies.html
 
 
-
+<br/><br/><br/>
 
