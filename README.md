@@ -63,8 +63,7 @@ The error distribution is somewhat normally distributed and slightly right-skewe
 #### References: 
 
 * https://scikit-learn.org/stable/modules/model_evaluation.html
-* https://towardsdatascience.com/what-is-one-hot-encoding-and-how-to-use-pandas-get-dummies-
-  function-922eb9bd4970
+* https://towardsdatascience.com/what-is-one-hot-encoding-and-how-to-use-pandas-get-dummies-function-922eb9bd4970
 * https://scikit-learn.org/stable/auto_examples/linear_model/plot_lasso_and_elasticnet.html
 * https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html
 * https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.get_dummies.html
